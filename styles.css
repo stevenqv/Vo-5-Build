@@ -17,9 +17,9 @@ body {
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
-    min-width:500px;
-    display:grid;
-    grid-template-columns:1fr;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 /*=== HEADER ===*/
@@ -130,7 +130,7 @@ footer {
 /* target the .card-row to display flex */
 /* target the sections in .card-row with a width for 30% */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
     body{
         grid-template-columns: 1fr 300px;
     }
@@ -138,17 +138,23 @@ footer {
         grid-column: 1/-1;
     }
 
-    nav a {
+    nav ul {
         display: flex;
         justify-content: space-around;
     }
 
     .card-row {
-        display:flex;
-        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
     }
 
-    #screenings, #workshops, #collaborations{
+    .card-row > section {
         width: 30%;
+    }
+
+    .card-row img{
+        object-fit: cover;
+        height: 150px;
     }
 }
